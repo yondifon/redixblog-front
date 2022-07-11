@@ -1,0 +1,28 @@
+query FetchHomePageItems ($first: Int = 5) {
+    posts (first: $first) {
+        data {
+            id
+            image
+            title
+        }
+    }
+    latestPost {
+        id 
+        title
+        image
+        author {
+            id 
+            name
+        }
+    }
+    popularPost {
+        id
+        title
+    }
+    latestPage {
+        id
+        summary
+        title
+        image
+    }
+}

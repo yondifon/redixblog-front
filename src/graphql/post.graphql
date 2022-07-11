@@ -1,0 +1,14 @@
+query FetchPost($id: ID!){
+    node(id: $id){
+        ... on Post {
+            id
+            body
+            title
+            publishedAt
+            author {
+                id
+                name
+            }
+        }
+    }
+}
